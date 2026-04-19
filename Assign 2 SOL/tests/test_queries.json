@@ -1,0 +1,361 @@
+{
+  "test_queries": [
+    {
+      "id": 1,
+      "category": "normal",
+      "query": "Best smartphone under $500",
+      "expected_category": "smartphones",
+      "expected_budget_max": 500
+    },
+    {
+      "id": 2,
+      "category": "normal",
+      "query": "Laptop for gaming and programming",
+      "expected_category": "gaming",
+      "expected_budget_max": null
+    },
+    {
+      "id": 3,
+      "category": "normal",
+      "query": "Wireless noise-cancelling headphones under $150",
+      "expected_category": "headphones",
+      "expected_budget_max": 150
+    },
+    {
+      "id": 4,
+      "category": "normal",
+      "query": "Best tablet for students under $300",
+      "expected_category": "tablets",
+      "expected_budget_max": 300
+    },
+    {
+      "id": 5,
+      "category": "normal",
+      "query": "Samsung smartphone with good camera",
+      "expected_category": "smartphones",
+      "expected_brand": "Samsung"
+    },
+    {
+      "id": 6,
+      "category": "normal",
+      "query": "Budget earbuds under $50 for gym",
+      "expected_category": "earbuds",
+      "expected_budget_max": 50
+    },
+    {
+      "id": 7,
+      "category": "normal",
+      "query": "Apple smartwatch for fitness tracking",
+      "expected_category": "smartwatches",
+      "expected_brand": "Apple"
+    },
+    {
+      "id": 8,
+      "category": "normal",
+      "query": "Best gaming laptop under $1000",
+      "expected_category": "gaming",
+      "expected_budget_max": 1000
+    },
+    {
+      "id": 9,
+      "category": "normal",
+      "query": "Mirrorless camera for photography beginners",
+      "expected_category": "cameras",
+      "expected_budget_max": null
+    },
+    {
+      "id": 10,
+      "category": "normal",
+      "query": "iPhone alternative with long battery life",
+      "expected_category": "smartphones"
+    },
+    {
+      "id": 11,
+      "category": "normal",
+      "query": "Best laptop under $800 for college students",
+      "expected_category": "laptops",
+      "expected_budget_max": 800
+    },
+    {
+      "id": 12,
+      "category": "normal",
+      "query": "Smartwatch with GPS and heart rate monitor",
+      "expected_category": "smartwatches"
+    },
+    {
+      "id": 13,
+      "category": "normal",
+      "query": "Tablet with stylus support for drawing",
+      "expected_category": "tablets"
+    },
+    {
+      "id": 14,
+      "category": "normal",
+      "query": "Over-ear headphones for music production",
+      "expected_category": "headphones"
+    },
+    {
+      "id": 15,
+      "category": "normal",
+      "query": "Best smartphone camera under $700",
+      "expected_category": "smartphones",
+      "expected_budget_max": 700
+    },
+    {
+      "id": 16,
+      "category": "normal",
+      "query": "Lightweight laptop for travel under $600",
+      "expected_category": "laptops",
+      "expected_budget_max": 600
+    },
+    {
+      "id": 17,
+      "category": "normal",
+      "query": "Gaming headset with microphone",
+      "expected_category": "headphones"
+    },
+    {
+      "id": 18,
+      "category": "normal",
+      "query": "5G smartphone with 120Hz display",
+      "expected_category": "smartphones"
+    },
+    {
+      "id": 19,
+      "category": "normal",
+      "query": "Business laptop with long battery life",
+      "expected_category": "laptops"
+    },
+    {
+      "id": 20,
+      "category": "normal",
+      "query": "True wireless earbuds with best sound quality",
+      "expected_category": "earbuds"
+    },
+    {
+      "id": 21,
+      "category": "pkr_budget",
+      "query": "Best smartphone under 100,000 PKR",
+      "expected_category": "smartphones",
+      "expected_budget_max_approx": 360
+    },
+    {
+      "id": 22,
+      "category": "pkr_budget",
+      "query": "Laptop under 150,000 PKR for university",
+      "expected_category": "laptops",
+      "expected_budget_max_approx": 536
+    },
+    {
+      "id": 23,
+      "category": "pkr_budget",
+      "query": "Best gaming laptop under 200,000 PKR",
+      "expected_category": "gaming",
+      "expected_budget_max_approx": 714
+    },
+    {
+      "id": 24,
+      "category": "pkr_budget",
+      "query": "Earbuds under 10,000 PKR",
+      "expected_category": "earbuds",
+      "expected_budget_max_approx": 36
+    },
+    {
+      "id": 25,
+      "category": "pkr_budget",
+      "query": "Flagship phone under 300,000 PKR",
+      "expected_category": "smartphones"
+    },
+    {
+      "id": 26,
+      "category": "vague",
+      "query": "I need a new phone",
+      "expected_category": "smartphones",
+      "note": "No budget — should still return results"
+    },
+    {
+      "id": 27,
+      "category": "vague",
+      "query": "Recommend me a good laptop",
+      "expected_category": "laptops",
+      "note": "No budget specified"
+    },
+    {
+      "id": 28,
+      "category": "vague",
+      "query": "Something for listening to music",
+      "note": "Very vague — should infer headphones or earbuds"
+    },
+    {
+      "id": 29,
+      "category": "vague",
+      "query": "Best tech gift under $100",
+      "note": "Broad category — should handle gracefully"
+    },
+    {
+      "id": 30,
+      "category": "vague",
+      "query": "I want a premium device",
+      "note": "No category or budget — should ask or make reasonable assumptions"
+    },
+    {
+      "id": 31,
+      "category": "multi_criteria",
+      "query": "Gaming laptop under $1200 with 16GB RAM and RTX GPU, good for streaming",
+      "expected_category": "gaming",
+      "expected_budget_max": 1200
+    },
+    {
+      "id": 32,
+      "category": "multi_criteria",
+      "query": "Sony headphones with noise cancelling, good bass, under $300",
+      "expected_category": "headphones",
+      "expected_brand": "Sony",
+      "expected_budget_max": 300
+    },
+    {
+      "id": 33,
+      "category": "multi_criteria",
+      "query": "Apple iPad for drawing with Apple Pencil support under $700",
+      "expected_category": "tablets",
+      "expected_brand": "Apple",
+      "expected_budget_max": 700
+    },
+    {
+      "id": 34,
+      "category": "multi_criteria",
+      "query": "Smartphone with 5000mAh battery, fast charging, good camera, under $400",
+      "expected_category": "smartphones",
+      "expected_budget_max": 400
+    },
+    {
+      "id": 35,
+      "category": "multi_criteria",
+      "query": "Thin and light laptop, Windows, 12+ hours battery, for business travel under $900",
+      "expected_category": "laptops",
+      "expected_budget_max": 900
+    },
+    {
+      "id": 36,
+      "category": "edge_case",
+      "query": "Phone",
+      "note": "Single word query — minimal context"
+    },
+    {
+      "id": 37,
+      "category": "edge_case",
+      "query": "Best product ever made",
+      "note": "No useful context — should handle gracefully"
+    },
+    {
+      "id": 38,
+      "category": "edge_case",
+      "query": "Laptop under $1",
+      "note": "Impossibly low budget — should handle with no results or suggest adjusting"
+    },
+    {
+      "id": 39,
+      "category": "edge_case",
+      "query": "I want Sony and Samsung at the same time",
+      "note": "Conflicting brand preference"
+    },
+    {
+      "id": 40,
+      "category": "edge_case",
+      "query": "Cheap premium flagship phone",
+      "note": "Contradictory requirements — cheap vs premium"
+    },
+    {
+      "id": 41,
+      "category": "edge_case",
+      "query": "Best product in category XYZ",
+      "note": "Unknown category — should fallback to general"
+    },
+    {
+      "id": 42,
+      "category": "edge_case",
+      "query": "Laptop for gaming with no screen",
+      "note": "Contradictory spec — laptop without display"
+    },
+    {
+      "id": 43,
+      "category": "edge_case",
+      "query": "5G phone in Pakistan with warranty",
+      "note": "Location-specific query"
+    },
+    {
+      "id": 44,
+      "category": "edge_case",
+      "query": "What is the best TV?",
+      "note": "Category not in our dataset — should handle gracefully"
+    },
+    {
+      "id": 45,
+      "category": "edge_case",
+      "query": "Laptop that costs exactly $499.99",
+      "note": "Exact price match — very narrow budget range"
+    },
+    {
+      "id": 46,
+      "category": "followup",
+      "query": "What about a cheaper option?",
+      "note": "Follow-up to a previous recommendation — requires chat history context"
+    },
+    {
+      "id": 47,
+      "category": "followup",
+      "query": "Which one has the best battery?",
+      "note": "Follow-up comparing battery from previous results"
+    },
+    {
+      "id": 48,
+      "category": "followup",
+      "query": "Tell me more about the second option",
+      "note": "Follow-up asking for detail on a specific result"
+    },
+    {
+      "id": 49,
+      "category": "comparison",
+      "query": "Compare Samsung Galaxy S24 and iPhone 15",
+      "note": "Direct product comparison"
+    },
+    {
+      "id": 50,
+      "category": "comparison",
+      "query": "Sony WH-1000XM5 vs Bose QuietComfort headphones",
+      "note": "Direct comparison of two known products"
+    },
+    {
+      "id": 51,
+      "category": "normal",
+      "query": "Best rugged smartphone for outdoor use",
+      "expected_category": "smartphones"
+    },
+    {
+      "id": 52,
+      "category": "normal",
+      "query": "Laptop for video editing under $1500",
+      "expected_category": "laptops",
+      "expected_budget_max": 1500
+    },
+    {
+      "id": 53,
+      "category": "normal",
+      "query": "Smartwatch for Android users",
+      "expected_category": "smartwatches"
+    },
+    {
+      "id": 54,
+      "category": "normal",
+      "query": "Earbuds for running that don't fall out",
+      "expected_category": "earbuds"
+    },
+    {
+      "id": 55,
+      "category": "normal",
+      "query": "Best DSLR camera under $800 for portraits",
+      "expected_category": "cameras",
+      "expected_budget_max": 800
+    }
+  ]
+}
